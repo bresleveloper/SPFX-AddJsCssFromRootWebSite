@@ -6,7 +6,7 @@ This SPFx Extension is to provide CSS and JS file on a modern site for custom co
 
 more info at [SPXF-EX-assJsCss](https://github.com/bresleveloper/SPXF-EX-assJsCss/)
 
-
+ariel
 ## Set your site
 Change paths in:
 
