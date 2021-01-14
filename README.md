@@ -1,73 +1,42 @@
 # add-css-js-from-root-web
 
-## Summary
+This SPFx Extension is to provide CSS and JS file on a modern site for custom code, from root website i.e. `https://{tenant}.sharepoint.com`, for all sites/webs to use the same JS/CSS
 
-Short summary on functionality and used technologies.
+## More Info
 
-[picture of the solution in action, if possible]
+more info at [SPXF-EX-assJsCss](https://github.com/bresleveloper/SPXF-EX-assJsCss/)
 
-## Used SharePoint Framework Version
 
-![version](https://img.shields.io/badge/version-1.11-green.svg)
+## Set your site
+Change paths in:
 
-## Applies to
+steps:
+* add to app catalog (create if needed, add to the "distribute to SharePoint"), dont click the checkbox
+* add the app (site content -> new -> app)
+* create DocumentLibrary named `rootCustomFiles` (can be changed in the .ts file)
+* add jss/css files there, names must be `rootCustomSiteScript.js`, `rootCustomSiteScript.css`
 
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
 
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
+### commands
+once - `gulp trust-dev-cert`
 
-## Prerequisites
 
-> Any special pre-requisites?
+`gulp serve`
 
-## Solution
 
-Solution|Author(s)
---------|---------
-folder name | Author details (name, company, twitter alias with link)
+`gulp build`
+`gulp bundle --ship`
+`gulp package-solution --ship`
 
-## Version history
 
-Version|Date|Comments
--------|----|--------
-1.1|March 10, 2021|Update comment
-1.0|January 29, 2021|Initial release
+`document.querySelector("#workbenchPageContent").style.maxWidth='1200px'`
 
-## Disclaimer
 
-**THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
 
----
+`git add .`
+`git commit -m "comment"`
+`git push -u origin master`
 
-## Minimal Path to Awesome
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
 
-> Include any additional steps as needed.
 
-## Features
-
-Description of the extension that expands upon high-level summary above.
-
-This extension illustrates the following concepts:
-
-- topic 1
-- topic 2
-- topic 3
-
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
-
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
-
-## References
-
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
